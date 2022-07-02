@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Highest Occurrence</title>
+    </head>
+
+    <body>
+        <h1>Candidate Exercise / Full-stack Web Developer for Yopidoya</h1>
+        <h2>Exercise 1 - Highest Occurrence</h3>
+        <h4>Click on START button to input all the elements of an array of size 7</h4>
+        <button onclick="collectInputs()">START</button>
+    </body>
+
+</html> 
+
+
+<script>
+    
+    // Declaring the maximum size of the array
+    ARRAY_SIZE = 7;
+
+    //Function to collect the user input
+    function collectInputs() 
+    {
+
+        // Declaring the variable "collect" that represents an array of all the elements that the user choose
+        let collect = new Array(ARRAY_SIZE);
+        for (let i = 0; i < ARRAY_SIZE; i++)
+        {
+            collect[i] = prompt("Add an input " + (i + 1) +" of "+ ARRAY_SIZE);
+            // console.log(collect[i]);
+        }
+    
+
+        // Creating an array to store the frequency of each element of the collect array.
+        let count = new Array(ARRAY_SIZE);
+        for (let i = 0; i < ARRAY_SIZE; i++)
+        {
+            count[i] = 0;
+            //Loop to compare each element of the array with element i
+            for (let j = 0; j < ARRAY_SIZE; j++)
+            {
+                if (collect[i] === collect[j]) 
+                {
+                    //Sum of similar elements
+                    count[i] = count[i] + 1;
+                }
+            }
+        }
+
+
+        // Loop to calculate which element has more occurrence in the array.
+        let maxFreq = 0;
+        for (let i = 0; i < ARRAY_SIZE; i++)
+        {
+            if (count[maxFreq] < count[i])
+            {
+                maxFreq = i;
+            }
+        }
+
+
+        // Declaring an empty array called result which stores all the elements with the same frequency. 
+        let result = new Array('');
+        let duplicated = 0;
+        let e = 0;
+        // Loop to store the differents elements with same frequency
+        for (let i = 0; i < ARRAY_SIZE; i++)
+        {
+            // Condition to know if the element of the array count has the highest value
+            if (count[i] === count[maxFreq])
+            {
+                // Loop to not print the same value duplicated in the result array.
+                for (let j = 0; j < ARRAY_SIZE; j++)
+                {
+                    if (result[j] === collect[i])
+                    {
+                        duplicated = duplicated + 1;
+                    }
+                }
+                
+                if (duplicated === 0)
+                {
+                    result[e] = collect[i];
+                    e = e + 1;
+                }
+
+                duplicated = 0;
+                
+            }
+        }
+
+        alert("Highest Occurence: [" + result + "]"); 
+
+    }
+
+
+/*
+    alert('Average grade: '+ sum.toFixed(2)); //the .toFixed sets it to 2 decimal places
+*/
+
+
+</script>
