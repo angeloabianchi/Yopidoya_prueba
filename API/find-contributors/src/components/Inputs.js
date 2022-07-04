@@ -29,38 +29,6 @@ const Inputs = (props) => {
       );
   }, [username, repo]);
 
-
-  /* const handleClick = () => {
-    console.log(contributors[0].login);
-    for (let i = 0; i < contributors.length; i++) {
-      console.log(contributors[i].login);
-    }
-  } */
-
-  /* const handleClick = () => {
-    console.log(contributors[0].login);
-    for (let i = 0; i < contributors.length; i++) {
-      //console.log(contributors[i].login);
-      setLogin(`[${i}]: ` + contributors[i].login);
-    }
-    console.log(contributors.login);
-  } */
-
-  /* const handleClick = () => {
-    console.log(contributors[0].login);
-    for (let i = 0; i < contributors.length; i++) {
-      //console.log(contributors[i].login);
-      setLogin(contributors[i].login);
-    }
-  } */
-
-  /* const handleClick = () => {
-    Object.keys(contributors).map(key => {
-      const value = contributors[key];
-      console.log(value);
-    })
-  } */
-
     return (
         <div className="App">
             <div className="header">
