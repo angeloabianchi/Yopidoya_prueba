@@ -1,0 +1,60 @@
+.App {
+  margin: 50px auto;
+  height: 100vh;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
+  background-color: ghostwhite;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: xxx-large;
+  margin-bottom: 30px;
+
+}
+
+.description {
+  font-size: large;
+  margin-bottom: 20px;
+
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+}
+
+.inputs form {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+
+.inputs input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  height: 30px;
+  
+}
+
+.inputs button {
+  width: 50%;
+  height: 30px;
+  align-self: center;
+}
+
+.results {
+  background-color: beige;
+  width: auto;
+
+}
